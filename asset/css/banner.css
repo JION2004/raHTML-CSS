@@ -235,6 +235,7 @@
   max-width: 100%;
   height: auto;
   display: block;
+  margin: 0 auto;
 }
 .section--bannerFooter .banner--footer .content--banner {
   position: absolute;

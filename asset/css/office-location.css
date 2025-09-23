@@ -298,6 +298,14 @@
     margin-top: 24px;
   }
 }
+.polygon--img_zoom {
+  transition: transform 0.3s ease-in-out;
+  transform-origin: center center;
+}
+
+.polygon--img_zoom.zoom-in {
+  transform: translate(-50%, -50%) scale(1.2);
+}
 .office--location
   .slide--officeLocation:hover
   .block--polygon

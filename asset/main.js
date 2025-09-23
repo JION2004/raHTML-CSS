@@ -177,31 +177,25 @@ listControlBanner.onclick = (e) => {
   startInterVal();
 };
 
-const itemsPolygon = document.querySelectorAll(".polygon--bg__img");
-
-const observer = new IntersectionObserver(
-  (entries) => {
-    entries.forEach((entry) => {
-      if (entry.isIntersecting) {
-        entry.target.classList.add("zoom-in");
-      } else {
-        entry.target.classList.remove("zoom-in");
-      }
-    });
-  },
-  { threshold: 0.1 }
-);
+const itemsPolygon = document.querySelectorAll(".polygon--img_zoom");
 
 itemsPolygon.forEach((item) => {
-  observer.observe(item);
+  // Thêm sự kiện khi di chuột vào (mouseover)
+  item.addEventListener("mouseover", () => {
+    item.classList.add("zoom-in");
+  });
+
+  // Thêm sự kiện khi di chuột ra (mouseout)
+  item.addEventListener("mouseout", () => {
+    item.classList.remove("zoom-in");
+  });
 });
+const header = document.querySelector(".header");
 
-const header = document.querySelector('.header');
-
-window.addEventListener('scroll', () => {
+window.addEventListener("scroll", () => {
   if (window.scrollY > window.innerHeight) {
-    header.classList.add('header--scrolled');
+    header.classList.add("header--scrolled");
   } else {
-    header.classList.remove('header--scrolled');
+    header.classList.remove("header--scrolled");
   }
 });
