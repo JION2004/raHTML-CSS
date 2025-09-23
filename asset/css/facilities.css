@@ -1,0 +1,26 @@
+.section--facilities {
+  margin-top: 40px;
+}
+.section--facilities .facilities {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  align-items: center;
+  column-gap: 24px;
+}
+@media screen and (max-width: 768px) {
+  .section--facilities .facilities {
+    grid-template-columns: 1fr;
+    row-gap: 24px;
+  }
+}
+.section--facilities .facilities .facilities__info .facilities__title {
+  text-align: left;
+}
+.section--facilities .facilities .facilities__info .facilities__content {
+  margin-top: 16px;
+  line-height: 1.36;
+}
+.section--facilities .facilities .facilities__img img {
+  max-width: 100%;
+  height: auto;
+}
