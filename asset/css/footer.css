@@ -139,12 +139,34 @@
   row-gap: 8px;
 }
 .footer .bottom--footer .list--content__item .menu--linkFooter__item a {
+  position: relative; /* Set position to relative for the pseudo-element */
   padding: 2px 0;
   color: white;
-  border-bottom: 1px solid transparent;
   font-size: 1.4rem;
-  transition: all 0.2s linear;
+  text-decoration: none;
+  transform: translateX(0);
+  transition: transform 0.3s;
 }
+
+.footer .bottom--footer .list--content__item .menu--linkFooter__item a::after {
+  content: "";
+  position: absolute;
+  bottom: -4px; /* Thay đổi giá trị từ 0 thành -4px */
+  left: 0;
+  width: 0;
+  height: 1px;
+  background-color: #fffefe;
+  transition: width 0.3s ease-in-out;
+}
+
 .footer .bottom--footer .list--content__item .menu--linkFooter__item a:hover {
-  border-color: #b37475;
+  transform: translateX(10px);
+}
+
+.footer
+  .bottom--footer
+  .list--content__item
+  .menu--linkFooter__item
+  a:hover::after {
+  width: 100%;
 }

@@ -177,15 +177,14 @@ listControlBanner.onclick = (e) => {
   startInterVal();
 };
 
-const itemsPolygon = document.querySelectorAll(".polygon--img_zoom");
+const itemsPolygon = document.querySelectorAll(".style--polygonImg");
 
 itemsPolygon.forEach((item) => {
-  // Thêm sự kiện khi di chuột vào (mouseover)
+  // Add event listeners for mouseover and mouseout
   item.addEventListener("mouseover", () => {
     item.classList.add("zoom-in");
   });
 
-  // Thêm sự kiện khi di chuột ra (mouseout)
   item.addEventListener("mouseout", () => {
     item.classList.remove("zoom-in");
   });
@@ -198,4 +197,97 @@ window.addEventListener("scroll", () => {
   } else {
     header.classList.remove("header--scrolled");
   }
+});
+const backToTopBtn = document.getElementById("backToTopBtn");
+
+window.addEventListener("scroll", () => {
+  if (window.scrollY > 300) {
+    backToTopBtn.style.display = "flex";
+  } else {
+    backToTopBtn.style.display = "none";
+  }
+});
+
+backToTopBtn.addEventListener("click", (e) => {
+  e.preventDefault();
+
+  window.scrollTo({
+    top: 0,
+    behavior: "smooth",
+  });
+});
+document.addEventListener("DOMContentLoaded", () => {
+  const langControls = document.querySelectorAll(".control--languge");
+
+  langControls.forEach((langControl) => {
+    const langDropdown = langControl.querySelector(".language-dropdown");
+
+    langControl.addEventListener("click", (event) => {
+      event.stopPropagation();
+      document
+        .querySelectorAll(".language-dropdown.show")
+        .forEach((dropdown) => {
+          if (dropdown !== langDropdown) {
+            dropdown.classList.remove("show");
+            dropdown.closest(".control--languge").classList.remove("open");
+          }
+        });
+
+      langDropdown.classList.toggle("show");
+      langControl.classList.toggle("open");
+    });
+  });
+
+  document.addEventListener("click", (event) => {
+    document.querySelectorAll(".language-dropdown.show").forEach((dropdown) => {
+      const parentControl = dropdown.closest(".control--languge");
+      if (!parentControl.contains(event.target)) {
+        dropdown.classList.remove("show");
+        parentControl.classList.remove("open");
+      }
+    });
+  });
+});
+document.addEventListener("DOMContentLoaded", () => {
+  // Select the necessary elements
+  const searchIcon = document.querySelector(".control--search");
+  const searchOverlay = document.querySelector(".search-overlay");
+  const closeBtn = document.querySelector(".search-close-btn");
+
+  // Function to open the search overlay
+  function openSearch() {
+    searchOverlay.classList.add("show");
+  }
+
+  // Function to close the search overlay
+  function closeSearch() {
+    searchOverlay.classList.remove("show");
+  }
+
+  // Add event listeners
+  searchIcon.addEventListener("click", openSearch);
+  closeBtn.addEventListener("click", closeSearch);
+
+  // Optional: Close the overlay by pressing the 'Escape' key
+  document.addEventListener("keydown", (e) => {
+    if (e.key === "Escape" && searchOverlay.classList.contains("show")) {
+      closeSearch();
+    }
+  });
+
+  // Optional: Close the overlay by clicking outside the search bar
+  searchOverlay.addEventListener("click", (e) => {
+    if (e.target.classList.contains("search-overlay")) {
+      closeSearch();
+    }
+  });
+});
+// Lấy các phần tử cần thiết từ DOM
+const hamburgerBtn = document.querySelector(".menu--bar");
+const menu = document.querySelector(".mobile-menu");
+
+// Thêm sự kiện 'click' vào nút hamburger
+hamburgerBtn.addEventListener("click", () => {
+  // Thêm hoặc xóa class 'is-active' trên menu
+  menu.classList.toggle("is-active");
 });

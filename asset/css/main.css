@@ -8,3 +8,6 @@
 @import url("./office-location.css");
 @import url("./facilities.css");
 @import url("./news.css");
+html {
+  overflow: auto;
+}

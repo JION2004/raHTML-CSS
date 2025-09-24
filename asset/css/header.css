@@ -26,15 +26,16 @@
   display: none;
 }
 @media screen and (max-width: 1200px) {
-  .header .header__child .header--logo .menu--bar {
+  .header .header__child .header--control .menu--bar {
     display: block;
   }
 }
-.header .header__child .header--logo .menu--bar svg {
+.header .header__child .header--control .menu--bar svg {
   width: 24px;
   height: 24px;
   stroke: white;
 }
+
 .header .header__child .header--menu {
   display: flex;
   align-items: center;
@@ -87,10 +88,169 @@
   align-items: center;
   column-gap: 24px;
 }
+.control--languge {
+  position: relative;
+}
+
+.language-dropdown {
+  display: none;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  background-color: #fdfbfb;
+  border-radius: 4px;
+  z-index: 10;
+  min-width: 50px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  transition: opacity 0.3s ease, transform 0.3s ease;
+  transform: translateY(10px);
+  opacity: 0;
+}
+
+.language-dropdown.show {
+  display: block;
+  transform: translateY(0);
+  opacity: 1;
+}
+
+.language-dropdown a {
+  height: 30px;
+  line-height: 30px;
+  padding: 0 10px;
+
+  color: black;
+  text-decoration: none;
+  display: block;
+  font-size: 14px;
+}
+
+@media (max-width: 768px) {
+  .language-dropdown {
+    left: 50%;
+    transform: translateX(-50%);
+  }
+
+  .language-dropdown.show {
+    transform: translateY(0) translateX(-50%);
+  }
+
+  .language-dropdown a {
+    font-size: 1.6rem;
+    padding: 8px 12px;
+    height: auto;
+    line-height: normal;
+  }
+}
+.control--languge svg {
+  transition: transform 0.3s ease;
+}
+
+.control--languge.open svg {
+  transform: rotate(180deg);
+}
+.control--search {
+  cursor: pointer;
+}
+
+.control--search svg {
+  width: 16px;
+  height: 16px;
+  stroke: white;
+}
+
+/* Lớp phủ tìm kiếm toàn màn hình */
+.search-overlay {
+  display: none;
+  position: fixed; /* Quan trọng: Sử dụng fixed để cố định vị trí */
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.7);
+  z-index: 9999;
+  transition: opacity 0.3s ease;
+  opacity: 0;
+}
+
+.search-overlay.show {
+  display: block;
+  opacity: 1;
+}
+
+/* Nút tắt chức năng tìm kiếm */
+.search-close-btn {
+  position: absolute; /* Định vị tuyệt đối so với .search-overlay */
+  top: 20px; /* Cách mép trên 20px */
+  right: 20px; /* Cách mép phải 20px */
+  border: none;
+  background: transparent;
+  font-size: 40px;
+  font-weight: 300;
+  cursor: pointer;
+  color: white; /* Màu trắng để nổi bật trên nền đen */
+  line-height: 1;
+  z-index: 10000; /* Đảm bảo nút luôn nằm trên lớp phủ */
+}
+
+/* Khung chứa thanh tìm kiếm */
+.search-container {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 90%;
+  max-width: 600px;
+  display: flex;
+  align-items: center;
+  background-color: white;
+  border-radius: 50px;
+  padding: 10px 20px;
+}
+
+/* Các phần tử còn lại của thanh tìm kiếm */
+.search-bar-icon {
+  width: 20px;
+  height: 20px;
+  stroke: #888;
+  cursor: pointer;
+  order: 2;
+}
+
+.search-input {
+  border: none;
+  outline: none;
+  flex-grow: 1;
+  font-size: 16px;
+  padding: 8px;
+  background: transparent;
+  order: 1;
+}
+
+/* Các quy tắc responsive cho màn hình nhỏ */
+@media (max-width: 768px) {
+  .search-container {
+    width: 95%;
+    padding: 8px 15px;
+  }
+  .search-input {
+    font-size: 14px;
+  }
+  .search-bar-icon {
+    width: 18px;
+    height: 18px;
+  }
+  .search-close-btn {
+    top: 15px;
+    right: 15px;
+    font-size: 35px;
+  }
+}
+
 .header .header__child .header--control .control--languge {
   display: flex;
   align-items: center;
   column-gap: 4px;
+  cursor: pointer;
 }
 .header .header__child .header--control .control--languge span {
   font-size: 1.4rem;
@@ -134,4 +294,42 @@
 
 .header.header--scrolled .control--languge svg {
   fill: white;
+}
+
+.mobile-menu {
+  display: none;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  width: 100%;
+  background-color: #801618;
+  padding: 10px 0;
+}
+
+.mobile-menu.is-active {
+  display: block;
+}
+
+.mobile-menu__list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.mobile-menu__item {
+  text-align: center;
+}
+
+.mobile-menu__item a {
+  display: block;
+  padding: 10px;
+  color: white;
+  text-decoration: none;
+  font-size: 1.6rem;
+}
+
+@media screen and (min-width: 1201px) {
+  .mobile-menu {
+    display: none !important;
+  }
 }
