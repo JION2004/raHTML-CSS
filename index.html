@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Rã HTML CSS</title>
+    <title>raHTML_CSS</title>
 
     <!-- gg font  -->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
@@ -14,43 +14,19 @@
     />
 
     <!-- css -->
-    <link rel="stylesheet" href="./asset/css/main.css" />
+    <link rel="stylesheet" href="asset/css/main.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
+    />
   </head>
   <body>
     <!-- header -->
-
-    <header class="header">
-      <div class="container-lg">
+    <h1 style="display: none">Công Ty TNHH Hóa Chất Mercury</h1>
+    <header id="header" class="header">
+      <div class="container">
         <div class="header__child">
           <div class="header--logo">
-            <div class="menu--bar">
-              <svg
-                width="24"
-                height="24"
-                viewBox="0 0 24 24"
-                fill="none"
-                xmlns="http://www.w3.org/2000/svg"
-              >
-                <path
-                  d="M3.75 12H20.25"
-                  stroke-width="1.5"
-                  stroke-linecap="round"
-                  stroke-linejoin="round"
-                />
-                <path
-                  d="M3.75 6H20.25"
-                  stroke-width="1.5"
-                  stroke-linecap="round"
-                  stroke-linejoin="round"
-                />
-                <path
-                  d="M3.75 18H20.25"
-                  stroke-width="1.5"
-                  stroke-linecap="round"
-                  stroke-linejoin="round"
-                />
-              </svg>
-            </div>
             <a href="#!">
               <img
                 src="https://mercurychemical.com/wp-content/uploads/2024/10/logo-mercury.svg"
@@ -59,92 +35,129 @@
             </a>
           </div>
           <!-- menu -->
-          <ul class="header--menu">
-            <li class="header--menu__item">
-              <a href="#!">
-                <svg
-                  xmlns="http://www.w3.org/2000/svg"
-                  fill="none"
-                  viewBox="0 0 24 24"
-                  stroke-width="1.5"
-                  stroke="currentColor"
-                  class="size-6"
-                >
-                  <path
-                    stroke-linecap="round"
-                    stroke-linejoin="round"
-                    d="m2.25 12 8.954-8.955c.44-.439 1.152-.439 1.591 0L21.75 12M4.5 9.75v10.125c0 .621.504 1.125 1.125 1.125H9.75v-4.875c0-.621.504-1.125 1.125-1.125h2.25c.621 0 1.125.504 1.125 1.125V21h4.125c.621 0 1.125-.504 1.125-1.125V9.75M8.25 21h8.25"
-                  />
-                </svg>
-              </a>
-            </li>
-            <li class="header--menu__item"><a href="#!">Về chúng tôi</a></li>
-            <li class="header--menu__item">
-              <a href="#!">Lĩnh vực hoạt động</a>
-            </li>
-            <li class="header--menu__item"><a href="#!">Sản phẩm</a></li>
-            <li class="header--menu__item">
-              <a href="#!">Phát triển bền vững</a>
-            </li>
-            <li class="header--menu__item"><a href="#!">Tin tức</a></li>
-            <li class="header--menu__item"><a href="#!">Liên hệ</a></li>
-          </ul>
-          <!-- control -->
-          <li class="header--control">
-            <div class="control--languge">
-              <span>Vn</span>
-              <svg
-                width="24"
-                height="24"
-                viewBox="0 0 24 24"
-                fill="none"
-                xmlns="http://www.w3.org/2000/svg"
-              >
-                <path
-                  d="M20.1929 8.71298C20.1361 8.57594 20.04 8.45881 19.9167 8.3764C19.7933 8.29399 19.6483 8.25 19.5 8.25H4.5C4.35167 8.25 4.20666 8.29399 4.08332 8.3764C3.95998 8.45881 3.86385 8.57595 3.80709 8.713C3.75032 8.85004 3.73547 9.00084 3.76441 9.14633C3.79336 9.29182 3.86479 9.42546 3.96968 9.53034L11.4697 17.0303C11.5393 17.1 11.622 17.1552 11.713 17.1929C11.804 17.2306 11.9015 17.25 12 17.25C12.0985 17.25 12.196 17.2306 12.287 17.1929C12.378 17.1552 12.4607 17.1 12.5303 17.0303L20.0303 9.53034C20.1352 9.42545 20.2066 9.29181 20.2356 9.14632C20.2645 9.00084 20.2497 8.85003 20.1929 8.71298Z"
-                />
-              </svg>
-              <div class="language-dropdown">
-                <a href="#">EN</a>
-              </div>
-            </div>
-            <div class="control--search">
-              <svg
-                width="15"
-                height="15"
-                viewBox="0 0 15 15"
-                fill="none"
-                xmlns="http://www.w3.org/2000/svg"
-              >
-                <path
-                  d="M14.5 14.5L10.5 10.5M6.5 12.5C3.18629 12.5 0.5 9.81371 0.5 6.5C0.5 3.18629 3.18629 0.5 6.5 0.5C9.81371 0.5 12.5 3.18629 12.5 6.5C12.5 9.81371 9.81371 12.5 6.5 12.5Z"
-                />
-              </svg>
-            </div>
+          <nav class="nav--menu">
+            <ul class="header--menu">
+              <li class="header--menu__item">
+                <a href="#!"
+                  ><svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    fill="none"
+                    viewBox="0 0 24 24"
+                    stroke-width="1.5"
+                    stroke="currentColor"
+                    class="size-6"
+                  >
+                    <path
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      d="m2.25 12 8.954-8.955c.44-.439 1.152-.439 1.591 0L21.75 12M4.5 9.75v10.125c0 .621.504 1.125 1.125 1.125H9.75v-4.875c0-.621.504-1.125 1.125-1.125h2.25c.621 0 1.125.504 1.125 1.125V21h4.125c.621 0 1.125-.504 1.125-1.125V9.75M8.25 21h8.25"
+                    />
+                  </svg>
+                </a>
+              </li>
+              <li class="header--menu__item"><a href="#!">Về chúng tôi</a></li>
+              <li class="header--menu__item">
+                <a href="#!">Lĩnh vực hoạt động</a>
+              </li>
+              <li class="header--menu__item"><a href="#!">Sản phẩm</a></li>
+              <li class="header--menu__item">
+                <a href="#!">Phát triển bền vững</a>
+              </li>
+              <li class="header--menu__item"><a href="#!">Tin tức</a></li>
+              <li class="header--menu__item"><a href="#!">Liên hệ</a></li>
+              <li class="header--control">
+                <div class="control--languge">
+                  <span>Vn</span>
+                  <svg
+                    width="24"
+                    height="24"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      d="M20.1929 8.71298C20.1361 8.57594 20.04 8.45881 19.9167 8.3764C19.7933 8.29399 19.6483 8.25 19.5 8.25H4.5C4.35167 8.25 4.20666 8.29399 4.08332 8.3764C3.95998 8.45881 3.86385 8.57595 3.80709 8.713C3.75032 8.85004 3.73547 9.00084 3.76441 9.14633C3.79336 9.29182 3.86479 9.42546 3.96968 9.53034L11.4697 17.0303C11.5393 17.1 11.622 17.1552 11.713 17.1929C11.804 17.2306 11.9015 17.25 12 17.25C12.0985 17.25 12.196 17.2306 12.287 17.1929C12.378 17.1552 12.4607 17.1 12.5303 17.0303L20.0303 9.53034C20.1352 9.42545 20.2066 9.29181 20.2356 9.14632C20.2645 9.00084 20.2497 8.85003 20.1929 8.71298Z"
+                    />
+                  </svg>
+                  <div class="language-dropdown">
+                    <a href="#">EN</a>
+                  </div>
+                </div>
+                <div class="control--search">
+                  <svg
+                    width="15"
+                    height="15"
+                    viewBox="0 0 15 15"
+                    fill="none"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      d="M14.5 14.5L10.5 10.5M6.5 12.5C3.18629 12.5 0.5 9.81371 0.5 6.5C0.5 3.18629 3.18629 0.5 6.5 0.5C9.81371 0.5 12.5 3.18629 12.5 6.5C12.5 9.81371 9.81371 12.5 6.5 12.5Z"
+                    />
+                  </svg>
+                </div>
 
-            <div class="search-overlay">
-              <div class="search-container">
-                <input
-                  type="text"
-                  class="search-input"
-                  placeholder="Bạn muốn tìm kiếm gì..."
-                />
-                <svg
-                  width="15"
-                  height="15"
-                  viewBox="0 0 15 15"
-                  fill="none"
-                  xmlns="http://www.w3.org/2000/svg"
-                  class="search-bar-icon"
-                >
-                  <path
-                    d="M14.5 14.5L10.5 10.5M6.5 12.5C3.18629 12.5 0.5 9.81371 0.5 6.5C0.5 3.18629 3.18629 0.5 6.5 0.5C9.81371 0.5 12.5 3.18629 12.5 6.5C12.5 9.81371 9.81371 12.5 6.5 12.5Z"
-                  />
-                </svg>
-                <button class="search-close-btn">×</button>
-              </div>
-            </div>
-          </li>
+                <div class="search-overlay">
+                  <button class="search-close-btn">×</button>
+                  <div class="search-container">
+                    <input
+                      type="text"
+                      class="search-input"
+                      placeholder="Bạn muốn tìm kiếm gì..."
+                    />
+
+                    <svg
+                      width="24"
+                      height="24"
+                      viewBox="0 0 15 15"
+                      fill="none"
+                      xmlns="http://www.w3.org/2000/svg"
+                      class="search-bar-icon"
+                    >
+                      <path
+                        d="M14.5 14.5L10.5 10.5M6.5 12.5C3.18629 12.5 0.5 9.81371 0.5 6.5C0.5 3.18629 3.18629 0.5 6.5 0.5C9.81371 0.5 12.5 3.18629 12.5 6.5C12.5 9.81371 9.81371 12.5 6.5 12.5Z"
+                      />
+                    </svg>
+                  </div>
+                </div>
+                <div class="menu--bar">
+                  <svg
+                    width="24"
+                    height="24"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      d="M3.75 12H20.25"
+                      stroke-width="1.5"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                    />
+                    <path
+                      d="M3.75 6H20.25"
+                      stroke-width="1.5"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                    />
+                    <path
+                      d="M3.75 18H20.25"
+                      stroke-width="1.5"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                    />
+                  </svg>
+
+                  <!--  -->
+                  <div class="left"></div>
+                  <div class="top"></div>
+                  <div class="right"></div>
+                  <div class="bottom"></div>
+                </div>
+              </li>
+            </ul>
+          </nav>
+          <!-- control -->
         </div>
       </div>
       <div class="mobile-menu">
@@ -320,19 +333,15 @@
       <div class="container-fruid">
         <section class="introduce">
           <div class="introduce__img">
-            <img
-              src="https://mercurychemical.com/wp-content/uploads/2024/10/gioi-thieu.jpg"
-              alt=""
-            />
+            <img src="./asset/img/mericu.png" alt="" />
           </div>
           <div class="info">
-            <h2 class="title">
-              <span class="uppercase"
-                ><span class="title__boldContent"> Mercury </span> Chemcal</span
-              >
-              <br />
-              Chemistry for a better world
-            </h2>
+            <div class="slogan">
+              <img
+                src="https://mercurychemical.com/wp-content/uploads/2024/10/4.svg"
+                alt="slogan"
+              />
+            </div>
             <!-- content -->
             <p class="content">
               Các cổ đông của Mercury Chemical là những nhà hóa học dày dặn kinh
@@ -342,7 +351,7 @@
               nghiệp đáp ứng tốt các yêu cầu của các đối tác đa quốc gia.
             </p>
             <div class="blockBtn-conentArrow btn__introduce">
-              <span>Về chúng tôi</span>
+              <span style="margin: 2px">Về chúng tôi</span>
               <div class="btn--arrow bdRed">
                 <svg
                   width="15"
@@ -360,90 +369,12 @@
 
         <!-- application  -->
         <section class="application bg--section">
-          <h2 class="title--font28 text--center">Ứng dụng</h2>
+          <h2 class="title--font48 text--center">Ứng dụng</h2>
           <!--  -->
           <ul class="list--application">
             <li class="list--application__items">
               <div class="application--img">
-                <img
-                  src="https://hoanghamobile.com/tin-tuc/wp-content/uploads/2023/09/pin-lithium-14.jpg"
-                  alt=""
-                />
-              </div>
-              <!-- info -->
-
-              <div class="grid--content">
-                <div class="block--title">
-                  <span>Pin Lithium</span>
-                </div>
-
-                <div class="block--contenBtn">
-                  <p class="content">
-                    Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                    Voluptate sunt animi deserunt! Recusandae rerum voluptatibus
-                    nesciunt, aperiam officiis nam voluptas nostrum illo, quas
-                    aspernatur doloribus aut alias minus modi consequatur.
-                  </p>
-                  <div class="alignCenter mr--btnApplication">
-                    <div class="btn--arrow bdWhite btn--application">
-                      <svg
-                        width="15"
-                        height="15"
-                        viewBox="0 0 15 15"
-                        fill="none"
-                        xmlns="http://www.w3.org/2000/svg"
-                      >
-                        <path d="M5 14L12 7.5L5 1" stroke-linecap="square" />
-                      </svg>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </li>
-            <li class="list--application__items">
-              <div class="application--img">
-                <img
-                  src="https://hoanghamobile.com/tin-tuc/wp-content/uploads/2023/09/pin-lithium-14.jpg"
-                  alt=""
-                />
-              </div>
-              <!-- info -->
-
-              <div class="grid--content">
-                <div class="block--title">
-                  <span>Pin Lithium</span>
-                </div>
-
-                <div class="block--contenBtn">
-                  <p class="content">
-                    Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                    Nesciunt laboriosam natus rem aperiam dolore non eligendi
-                    consectetur ullam, repellendus minus tempore provident
-                    veritatis vitae, delectus inventore alias debitis ratione
-                    nisi.
-                  </p>
-                  <div class="alignCenter mr--btnApplication">
-                    <div class="btn--arrow bdWhite btn--application">
-                      <svg
-                        width="15"
-                        height="15"
-                        viewBox="0 0 15 15"
-                        fill="none"
-                        xmlns="http://www.w3.org/2000/svg"
-                      >
-                        <path d="M5 14L12 7.5L5 1" stroke-linecap="square" />
-                      </svg>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </li>
-            <li class="list--application__items">
-              <div class="application--img">
-                <img
-                  src="https://hoanghamobile.com/tin-tuc/wp-content/uploads/2023/09/pin-lithium-14.jpg"
-                  alt=""
-                />
+                <img src="./asset/img/pinlitium.png" alt="" />
               </div>
               <!-- info -->
 
@@ -455,9 +386,9 @@
                 <div class="block--contenBtn">
                   <p class="content">
                     Lorem ipsum dolor sit amet, consectetur adipisicing elit.
-                    Mollitia quis laboriosam voluptas aliquam ipsam soluta autem
-                    quam dignissimos sint inventore amet sit eos sapiente
-                    blanditiis voluptatem rerum corrupti, atque ad!
+                    Nobis voluptas, harum porro eveniet non earum optio
+                    doloribus repudiandae ipsam dolorem, nesciunt fuga vero illo
+                    quas sed asperiores et ullam obcaecati?
                   </p>
                   <div class="alignCenter mr--btnApplication">
                     <div class="btn--arrow bdWhite btn--application">
@@ -477,24 +408,21 @@
             </li>
             <li class="list--application__items">
               <div class="application--img">
-                <img
-                  src="https://hoanghamobile.com/tin-tuc/wp-content/uploads/2023/09/pin-lithium-14.jpg"
-                  alt=""
-                />
+                <img src="./asset/img/oto.png" alt="" />
               </div>
               <!-- info -->
 
               <div class="grid--content">
                 <div class="block--title">
-                  <span>Pin Lithium</span>
+                  <span>Ô tô</span>
                 </div>
 
                 <div class="block--contenBtn">
                   <p class="content">
-                    Lorem ipsum dolor sit amet consectetur, adipisicing elit.
-                    Minima fuga, sequi totam rerum nobis error praesentium autem
-                    amet eos fugit nulla reprehenderit consequuntur cum nam
-                    accusamus voluptate repellendus, blanditiis aperiam.
+                    Lorem ipsum, dolor sit amet consectetur adipisicing elit.
+                    Saepe, hic? Qui blanditiis ipsum vitae accusamus.
+                    Perferendis soluta provident alias hic magnam possimus
+                    ratione delectus quas nihil, distinctio incidunt odit nemo.
                   </p>
                   <div class="alignCenter mr--btnApplication">
                     <div class="btn--arrow bdWhite btn--application">
@@ -514,25 +442,22 @@
             </li>
             <li class="list--application__items">
               <div class="application--img">
-                <img
-                  src="https://hoanghamobile.com/tin-tuc/wp-content/uploads/2023/09/pin-lithium-14.jpg"
-                  alt=""
-                />
+                <img src="./asset/img/nhuakythuat.png" alt="" />
               </div>
+
               <!-- info -->
 
               <div class="grid--content">
                 <div class="block--title">
-                  <span>Pin Lithium</span>
+                  <span>Cáp điện</span>
                 </div>
 
                 <div class="block--contenBtn">
                   <p class="content">
                     Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                    Consectetur reprehenderit deleniti repudiandae rem libero
-                    quisquam itaque perferendis repellat rerum aspernatur,
-                    eligendi, laudantium, quam optio iusto molestiae atque qui
-                    quo amet.
+                    Mollitia dolor quaerat natus, sapiente rerum autem, aliquam
+                    ratione a iure, quibusdam iste porro culpa facere reiciendis
+                    quas excepturi numquam? Perferendis, esse.
                   </p>
                   <div class="alignCenter mr--btnApplication">
                     <div class="btn--arrow bdWhite btn--application">
@@ -552,25 +477,91 @@
             </li>
             <li class="list--application__items">
               <div class="application--img">
-                <img
-                  src="https://hoanghamobile.com/tin-tuc/wp-content/uploads/2023/09/pin-lithium-14.jpg"
-                  alt=""
-                />
+                <img src="./asset/img/nhuakythuat.png" alt="" />
               </div>
               <!-- info -->
 
               <div class="grid--content">
                 <div class="block--title">
-                  <span>Pin Lithium</span>
+                  <span>Cáp điện</span>
                 </div>
 
                 <div class="block--contenBtn">
                   <p class="content">
                     Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                    Eius dolore doloremque inventore minus officiis libero
-                    fugiat sed eaque enim vitae, obcaecati sint a tempora dicta
-                    neque porro cumque modi dolor.
+                    Mollitia dolor quaerat natus, sapiente rerum autem, aliquam
+                    ratione a iure, quibusdam iste porro culpa facere reiciendis
+                    quas excepturi numquam? Perferendis, esse.
                   </p>
+                  <div class="alignCenter mr--btnApplication">
+                    <div class="btn--arrow bdWhite btn--application">
+                      <svg
+                        width="15"
+                        height="15"
+                        viewBox="0 0 15 15"
+                        fill="none"
+                        xmlns="http://www.w3.org/2000/svg"
+                      >
+                        <path d="M5 14L12 7.5L5 1" stroke-linecap="square" />
+                      </svg>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </li>
+            <li class="list--application__items">
+              <div class="application--img">
+                <img src="/asset//img/oto.png" alt="" />
+              </div>
+              <!-- info -->
+
+              <div class="grid--content">
+                <div class="block--title">
+                  <span>Tẩy rũa </span>
+                </div>
+
+                <div class="block--contenBtn">
+                  <p class="content">
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                    Voluptas consequuntur animi harum doloremque dolore iure
+                    cumque temporibus nihil eligendi aperiam libero voluptate,
+                    nulla atque corrupti accusamus eum dolorem optio incidunt.
+                  </p>
+                  <div class="alignCenter mr--btnApplication">
+                    <div class="btn--arrow bdWhite btn--application">
+                      <svg
+                        width="15"
+                        height="15"
+                        viewBox="0 0 15 15"
+                        fill="none"
+                        xmlns="http://www.w3.org/2000/svg"
+                      >
+                        <path d="M5 14L12 7.5L5 1" stroke-linecap="square" />
+                      </svg>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </li>
+            <li class="list--application__items">
+              <div class="application--img">
+                <img src="./asset/img/pinlitium.png" alt="" />
+              </div>
+              <!-- info -->
+
+              <div class="grid--content">
+                <div class="block--title">
+                  <span>Ô tô</span>
+                </div>
+
+                <div class="block--contenBtn">
+                  <p class="content">
+                    Lorem, ipsum dolor sit amet consectetur adipisicing elit.
+                    Laborum ea temporibus deleniti mollitia consequuntur tenetur
+                    nihil libero, culpa consequatur et qui quasi. Commodi
+                    ducimus quasi maiores sapiente consequatur nihil ea?
+                  </p>
+
                   <div class="alignCenter mr--btnApplication">
                     <div class="btn--arrow bdWhite btn--application">
                       <svg
@@ -657,106 +648,106 @@
         </section>
 
         <!-- polygon -->
-        <section class="office--location">
-          <div class="container-fruid">
-            <h2 class="title--font28 text--center">Vị trí văn phòng</h2>
+        <section class="section--officeLocation mr--section">
+          <div class="container">
+            <h2 class="title--font48 text--center">Vị trí văn phòng</h2>
             <!-- block polygon -->
             <div class="alignCenter">
-              <div class="slide--officeLocation">
-                <div class="block--polygon">
-                  <!--  -->
-                  <div style="--position: 1" class="block--polygon__item">
-                    <div class="polygon--img style--polygonImg">
-                      <img
-                        class="polygon--img_zoom"
-                        src="https://mercurychemical.com/wp-content/uploads/2024/10/VT-4.jpg"
-                        alt=""
-                      />
-                    </div>
-                    <div class="polygon--info">
-                      <h3 class="polygon--info__title">12km - 30 phút</h3>
-                      <p class="polygon--info__content">
-                        Sân bay Quốc tế Tân Sơn Nhất
-                      </p>
-                    </div>
+              <div class="block--polygon">
+                <!--  -->
+                <div style="--position: 1" class="block--polygon__item">
+                  <div class="polygon--img style--polygonImg">
+                    <img
+                      src="https://mercurychemical.com/wp-content/uploads/2024/10/VT-4.jpg"
+                      alt=""
+                    />
                   </div>
-                  <div style="--position: 2" class="block--polygon__item">
-                    <div class="polygon--img style--polygonImg">
-                      <img
-                        class="polygon--img_zoom"
-                        src="https://mercurychemical.com/wp-content/uploads/2024/10/VT-6.jpg"
-                        alt=""
-                      />
-                    </div>
-                    <div class="polygon--info">
-                      <h3 class="polygon--info__title">50km - 60 phút</h3>
-                      <p class="polygon--info__content">
-                        Sân bay Quốc tế Long thành mới
-                      </p>
-                    </div>
+                  <div class="polygon--info">
+                    <h3 class="polygon--info__title">12km - 30 phút</h3>
+                    <p class="polygon--info__content">
+                      Sân bay Quốc tế Tân Sơn Nhất
+                    </p>
                   </div>
-                  <div style="--position: 3" class="block--polygon__item">
-                    <div class="polygon--img style--polygonImg">
-                      <img
-                        class="polygon--img_zoom"
-                        src="https://mercurychemical.com/wp-content/uploads/2024/10/VT-5.jpg"
-                        alt=""
-                      />
-                    </div>
-                    <div class="polygon--info">
-                      <h3 class="polygon--info__title">15km - 30 phút</h3>
-                      <p class="polygon--info__content">Cản Biển</p>
-                    </div>
+                </div>
+                <div style="--position: 2" class="block--polygon__item">
+                  <div class="polygon--img style--polygonImg">
+                    <img
+                      src="https://mercurychemical.com/wp-content/uploads/2024/10/VT-6.jpg"
+                      alt=""
+                    />
                   </div>
-                  <div
-                    style="--position: 4"
-                    class="block--polygon__item orderContentLeft"
-                  >
-                    <div class="polygon--img style--polygonImg">
-                      <img
-                        class="polygon--img_zoom"
-                        src="https://mercurychemical.com/wp-content/uploads/2024/10/VT-2.jpg"
-                        alt=""
-                      />
-                    </div>
-                    <div class="polygon--info">
-                      <h3 class="polygon--info__title">5km - 15 phút</h3>
-                      <p class="polygon--info__content">Văn phòng trung tâm</p>
-                    </div>
+                  <div class="polygon--info">
+                    <h3 class="polygon--info__title">50km - 60 phút</h3>
+                    <p class="polygon--info__content">
+                      Sân bay Quốc tế Long thành mới
+                    </p>
                   </div>
-                  <div
-                    style="--position: 5"
-                    class="block--polygon__item orderContentLeft"
-                  >
-                    <div class="polygon--img style--polygonImg">
-                      <img
-                        class="polygon--img_zoom"
-                        src="https://mercurychemical.com/wp-content/uploads/2024/10/VT-2.jpg"
-                        alt=""
-                      />
-                    </div>
-                    <div class="polygon--info">
-                      <h3 class="polygon--info__title">12km - 30 phút</h3>
-                      <p class="polygon--info__content">Quận trung tâm</p>
-                    </div>
+                </div>
+                <div style="--position: 3" class="block--polygon__item">
+                  <div class="polygon--img style--polygonImg">
+                    <img
+                      src="https://mercurychemical.com/wp-content/uploads/2024/10/VT-5.jpg"
+                      alt=""
+                    />
                   </div>
-                  <div
-                    style="--position: 6"
-                    class="block--polygon__item orderContentLeft"
-                  >
-                    <div class="polygon--img style--polygonImg">
-                      <img
-                        class="polygon--img_zoom"
-                        src="https://mercurychemical.com/wp-content/uploads/2024/10/VT-5.jpg"
-                        alt=""
-                      />
-                    </div>
-                    <div class="polygon--info">
-                      <h3 class="polygon--info__title">19km - 15 phút</h3>
-                      <p class="polygon--info__content">Cảng Cát lái</p>
-                    </div>
+                  <div class="polygon--info">
+                    <h3 class="polygon--info__title">12km - 30 phút</h3>
+                    <p class="polygon--info__content">Cản Biển</p>
                   </div>
+                </div>
+                <div
+                  style="--position: 4"
+                  class="block--polygon__item orderContentLeft"
+                >
+                  <div class="polygon--img style--polygonImg">
+                    <img
+                      src="https://mercurychemical.com/wp-content/uploads/2024/10/VT-2.jpg"
+                      alt=""
+                    />
+                  </div>
+                  <div class="polygon--info">
+                    <h3 class="polygon--info__title">5km - 15 phút</h3>
+                    <p class="polygon--info__content">
+                      Quận kinh doanh trung tâm
+                    </p>
+                  </div>
+                </div>
+                <div
+                  style="--position: 5"
+                  class="block--polygon__item orderContentLeft"
+                >
+                  <div class="polygon--img style--polygonImg">
+                    <img
+                      src="https://mercurychemical.com/wp-content/uploads/2024/10/VT-2.jpg"
+                      alt=""
+                    />
+                  </div>
+                  <div class="polygon--info">
+                    <h3 class="polygon--info__title">12km - 30 phút</h3>
+                    <p class="polygon--info__content">
+                      Sân bay Quốc tế Tân Sơn Nhất
+                    </p>
+                  </div>
+                </div>
+                <div
+                  style="--position: 6"
+                  class="block--polygon__item orderContentLeft"
+                >
+                  <div class="polygon--img style--polygonImg">
+                    <img
+                      src="https://mercurychemical.com/wp-content/uploads/2024/10/VT-2.jpg"
+                      alt=""
+                    />
+                  </div>
+                  <div class="polygon--info">
+                    <h3 class="polygon--info__title">12km - 30 phút</h3>
+                    <p class="polygon--info__content">
+                      Sân bay Quốc tế Tân Sơn Nhất
+                    </p>
+                  </div>
+                </div>
 
+                <div class="polygon--blockMobile">
                   <div class="polygon">
                     <!--  -->
                     <div
@@ -775,7 +766,7 @@
 
                     <!--  -->
                     <div class="polygon--bg">
-                      <div class="polygon--bg__img style--polygonImgCenter">
+                      <div class="polygon--bg__img style--polygonImg">
                         <img
                           src="https://mercurychemical.com/wp-content/uploads/2024/10/gioi-thieu.jpg"
                           alt=""
@@ -783,21 +774,21 @@
                       </div>
                     </div>
                   </div>
-                  <!--  -->
                 </div>
+                <!--  -->
               </div>
             </div>
           </div>
         </section>
 
         <!-- section facilities -->
-        <section class="section--facilities bg--section">
-          <div class="container-lg">
+        <section class="section--facilities bg--section mr--section">
+          <div class="container">
             <!--  -->
             <div class="facilities">
               <!-- content -->
               <div class="facilities__info">
-                <h2 class="title--font28">
+                <h2 class="title--font48">
                   Cơ sở vật chất <br />
                   (Văn phòng, Kho hàng)
                 </h2>
@@ -828,125 +819,168 @@
         </section>
 
         <!-- section news -->
-        <section class="section--news">
-          <div class="container-xl">
+        <section class="section--news mr--section">
+          <div class="container">
             <div class="news">
-              <h2 class="title--font28 text--center">Tin tức nổi bậc</h2>
+              <h2 class="title--font48 text--center">Tin tức nổi bật</h2>
               <!-- list news -->
 
               <div class="list--news">
+                <div class="swiper">
+                  <div class="swiper-wrapper">
+                    <div class="swiper-slide">
+                      <article class="list--news__item">
+                        <!-- img -->
+                        <div class="news--thumnail">
+                          <a href="#!">
+                            <img
+                              src="https://mercurychemical.com/wp-content/uploads/2024/11/Picture1-1.png"
+                              alt=""
+                            />
+                          </a>
+                        </div>
+                        <!-- info  -->
+                        <div class="news--info">
+                          <div class="news--time">
+                            <svg
+                              class="news--time__icon"
+                              xmlns="http://www.w3.org/2000/svg"
+                              fill="none"
+                              viewBox="0 0 24 24"
+                              stroke-width="1.5"
+                              stroke="currentColor"
+                              class="size-6"
+                            >
+                              <path
+                                stroke-linecap="round"
+                                stroke-linejoin="round"
+                                d="M12 6v6h4.5m4.5 0a9 9 0 1 1-18 0 9 9 0 0 1 18 0Z"
+                              />
+                            </svg>
+                            <span class="news--time__content">09.03.2025</span>
+                          </div>
+                          <h3 class="news--info__name">
+                            <a href="#!"> Sàn tĩnh điện</a>
+                          </h3>
+                        </div>
+                      </article>
+                    </div>
+                    <div class="swiper-slide">
+                      <article class="list--news__item">
+                        <!-- img -->
+                        <div class="news--thumnail">
+                          <a href="#!">
+                            <img
+                              src="https://mercurychemical.com/wp-content/uploads/2024/11/Picture1-1.png"
+                              alt=""
+                            />
+                          </a>
+                        </div>
+                        <!-- info  -->
+                        <div class="news--info">
+                          <div class="news--time">
+                            <svg
+                              class="news--time__icon"
+                              xmlns="http://www.w3.org/2000/svg"
+                              fill="none"
+                              viewBox="0 0 24 24"
+                              stroke-width="1.5"
+                              stroke="currentColor"
+                              class="size-6"
+                            >
+                              <path
+                                stroke-linecap="round"
+                                stroke-linejoin="round"
+                                d="M12 6v6h4.5m4.5 0a9 9 0 1 1-18 0 9 9 0 0 1 18 0Z"
+                              />
+                            </svg>
+                            <span class="news--time__content">09.03.2025</span>
+                          </div>
+                          <h3 class="news--info__name">
+                            <a href="#!"> Sàn tĩnh điện</a>
+                          </h3>
+                        </div>
+                      </article>
+                    </div>
+                    <div class="swiper-slide">
+                      <article class="list--news__item">
+                        <!-- img -->
+                        <div class="news--thumnail">
+                          <a href="#!">
+                            <img
+                              src="https://mercurychemical.com/wp-content/uploads/2024/11/Picture1-1.png"
+                              alt=""
+                            />
+                          </a>
+                        </div>
+                        <!-- info  -->
+                        <div class="news--info">
+                          <div class="news--time">
+                            <svg
+                              class="news--time__icon"
+                              xmlns="http://www.w3.org/2000/svg"
+                              fill="none"
+                              viewBox="0 0 24 24"
+                              stroke-width="1.5"
+                              stroke="currentColor"
+                              class="size-6"
+                            >
+                              <path
+                                stroke-linecap="round"
+                                stroke-linejoin="round"
+                                d="M12 6v6h4.5m4.5 0a9 9 0 1 1-18 0 9 9 0 0 1 18 0Z"
+                              />
+                            </svg>
+                            <span class="news--time__content">09.03.2025</span>
+                          </div>
+                          <h3 class="news--info__name">
+                            <a href="#!"> Sàn tĩnh điện</a>
+                          </h3>
+                        </div>
+                      </article>
+                    </div>
+                    <div class="swiper-slide">
+                      <article class="list--news__item">
+                        <!-- img -->
+                        <div class="news--thumnail">
+                          <a href="#!">
+                            <img
+                              src="https://mercurychemical.com/wp-content/uploads/2024/11/Picture1-1.png"
+                              alt=""
+                            />
+                          </a>
+                        </div>
+                        <!-- info  -->
+                        <div class="news--info">
+                          <div class="news--time">
+                            <svg
+                              class="news--time__icon"
+                              xmlns="http://www.w3.org/2000/svg"
+                              fill="none"
+                              viewBox="0 0 24 24"
+                              stroke-width="1.5"
+                              stroke="currentColor"
+                              class="size-6"
+                            >
+                              <path
+                                stroke-linecap="round"
+                                stroke-linejoin="round"
+                                d="M12 6v6h4.5m4.5 0a9 9 0 1 1-18 0 9 9 0 0 1 18 0Z"
+                              />
+                            </svg>
+                            <span class="news--time__content">>09.03.2025</span>
+                          </div>
+                          <h3 class="news--info__name">
+                            <a href="#!"> Sàn tĩnh điện</a>
+                          </h3>
+                        </div>
+                      </article>
+                    </div>
+                  </div>
+                  <div class="swiper-pagination"></div>
+                </div>
                 <!-- control news -->
-                <article class="list--news__item">
-                  <!-- img -->
-                  <div class="news--thumnail">
-                    <a href="#!">
-                      <img
-                        src="https://mercurychemical.com/wp-content/uploads/2024/11/Picture1-1.png"
-                        alt=""
-                      />
-                    </a>
-                  </div>
-                  <!-- info  -->
-                  <div class="news--info">
-                    <div class="news--time">
-                      <svg
-                        class="news--time__icon"
-                        xmlns="http://www.w3.org/2000/svg"
-                        fill="none"
-                        viewBox="0 0 24 24"
-                        stroke-width="1.5"
-                        stroke="currentColor"
-                        class="size-6"
-                      >
-                        <path
-                          stroke-linecap="round"
-                          stroke-linejoin="round"
-                          d="M12 6v6h4.5m4.5 0a9 9 0 1 1-18 0 9 9 0 0 1 18 0Z"
-                        />
-                      </svg>
-                      <span class="news--time__content">09.03.2025</span>
-                    </div>
-                    <h3 class="news--info__name">
-                      <a href="#!"> Sàn tĩnh điện</a>
-                    </h3>
-                  </div>
-                </article>
-                <article class="list--news__item">
-                  <!-- img -->
-                  <div class="news--thumnail">
-                    <a href="#!">
-                      <img
-                        src="https://mercurychemical.com/wp-content/uploads/2025/08/esd-film.jpeg"
-                        alt=""
-                      />
-                    </a>
-                  </div>
-                  <!-- info  -->
-                  <div class="news--info">
-                    <div class="news--time">
-                      <svg
-                        class="news--time__icon"
-                        xmlns="http://www.w3.org/2000/svg"
-                        fill="none"
-                        viewBox="0 0 24 24"
-                        stroke-width="1.5"
-                        stroke="currentColor"
-                        class="size-6"
-                      >
-                        <path
-                          stroke-linecap="round"
-                          stroke-linejoin="round"
-                          d="M12 6v6h4.5m4.5 0a9 9 0 1 1-18 0 9 9 0 0 1 18 0Z"
-                        />
-                      </svg>
-                      <span class="news--time__content">09.23.2025</span>
-                    </div>
-                    <h3 class="news--info__name">
-                      <a href="#!">
-                        Màng phim chống tĩnh điện (ESD film) trong công nghiệp
-                        điện tử</a
-                      >
-                    </h3>
-                  </div>
-                </article>
-                <article class="list--news__item">
-                  <!-- img -->
-                  <div class="news--thumnail">
-                    <a href="#!">
-                      <img
-                        src="https://mercurychemical.com/wp-content/uploads/2025/07/TEGO-THERM-1.jpg"
-                        alt=""
-                      />
-                    </a>
-                  </div>
-                  <!-- info  -->
-                  <div class="news--info">
-                    <div class="news--time">
-                      <svg
-                        class="news--time__icon"
-                        xmlns="http://www.w3.org/2000/svg"
-                        fill="none"
-                        viewBox="0 0 24 24"
-                        stroke-width="1.5"
-                        stroke="currentColor"
-                        class="size-6"
-                      >
-                        <path
-                          stroke-linecap="round"
-                          stroke-linejoin="round"
-                          d="M12 6v6h4.5m4.5 0a9 9 0 1 1-18 0 9 9 0 0 1 18 0Z"
-                        />
-                      </svg>
-                      <span class="news--time__content">20.06.2024</span>
-                    </div>
-                    <h3 class="news--info__name">
-                      <a href="#!">
-                        Những xu hướng sẽ định hình công nghiệp hóa chất thế
-                        giới</a
-                      >
-                    </h3>
-                  </div>
-                </article>
+
                 <!-- btn controler news -->
                 <div class="block--btn__prev">
                   <div class="btn--arrow bgRgbBlack news--prev">
@@ -996,40 +1030,43 @@
         </section>
 
         <!-- section banner footer -->
-        <section class="section--bannerFooter">
+        <section class="section--bannerFooter mr--section">
           <div class="container-xl">
             <div class="banner--footer">
               <div class="banner--img">
                 <img
-                  src="./asset/img/Screenshot 2025-09-23 120119.png"
+                  src="https://mercurychemical.com/wp-content/uploads/2024/10/7.png"
                   alt=""
                 />
               </div>
+
               <!-- content banner -->
-              <div class="content--banner">
-                <h2 class="content--banner__title">
-                  Hóa học cho một thế giới tốt đẹp hơn
-                </h2>
-                <p class="content--banner__mainContent">
-                  Công ty TNHH Hóa Chất Mercury, với sứ mệnh "Hóa học cho một
-                  thế giới tốt đẹp hơn," không ngừng nỗ lực phát triển các giải
-                  pháp bền vững và thân thiện với môi trường. Chúng tôi, cùng
-                  với các đối tác toàn cầu, cam kết thực hiện các mục tiêu chính
-                  sau để thúc đẩy sự phát triển bền vững
-                </p>
-                <!--  -->
-                <div class="blockBtn-conentArrow content--banner__btn">
-                  <span>Xem thêm</span>
-                  <div class="btn--arrow bdRed">
-                    <svg
-                      width="15"
-                      height="15"
-                      viewBox="0 0 15 15"
-                      fill="none"
-                      xmlns="http://www.w3.org/2000/svg"
-                    >
-                      <path d="M5 14L12 7.5L5 1" stroke-linecap="square" />
-                    </svg>
+              <div class="container custom--containerBannerFooter">
+                <div class="content--banner">
+                  <h2 class="content--banner__title">
+                    Hóa học cho một thế giới tốt đẹp hơn
+                  </h2>
+                  <p class="content--banner__mainContent">
+                    Công ty TNHH Hóa Chất Mercury, với sứ mệnh "Hóa học cho một
+                    thế giới tốt đẹp hơn," không ngừng nỗ lực phát triển các
+                    giải pháp bền vững và thân thiện với môi trường. Chúng tôi,
+                    cùng với các đối tác toàn cầu, cam kết thực hiện các mục
+                    tiêu chính sau để thúc đẩy sự phát triển bền vững
+                  </p>
+                  <!--  -->
+                  <div class="blockBtn-conentArrow content--banner__btn">
+                    <span>Xem thêm</span>
+                    <div class="btn--arrow bdRed">
+                      <svg
+                        width="15"
+                        height="15"
+                        viewBox="0 0 15 15"
+                        fill="none"
+                        xmlns="http://www.w3.org/2000/svg"
+                      >
+                        <path d="M5 14L12 7.5L5 1" stroke-linecap="square" />
+                      </svg>
+                    </div>
                   </div>
                 </div>
               </div>
@@ -1041,9 +1078,9 @@
     </main>
 
     <!-- footer -->
-    <footer class="footer">
+    <footer class="footer mr--section">
       <div class="iconBackgroundfooter"></div>
-      <div class="container-lg">
+      <div class="container">
         <!-- top -->
         <div class="endow">
           <!-- left -->
@@ -1249,7 +1286,30 @@
       </div>
     </footer>
 
+    <!-- search -->
+    <div class="search-overlay">
+      <div class="search-overlay__close">
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          fill="none"
+          viewBox="0 0 24 24"
+          stroke-width="1.5"
+          stroke="currentColor"
+          class="size-6"
+        >
+          <path
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            d="M6 18L18 6M6 6l12 12"
+          />
+        </svg>
+      </div>
+      <div class="search-overlay__content">
+        <input type="text" placeholder="Search..." />
+      </div>
+    </div>
     <!-- link script -->
-    <script src="./asset/main.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <script src="./asset/mainjs/main.js"></script>
   </body>
 </html>
